@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--包括：跨行合并，跨列合并-->
+<!--步骤：
+1.明确合并目标
+2.保留最左/最上的单元格，添加属性（取值是数字，表示需要合并的单元格数量）
+- 跨行合并，保留最上的单元格，添加rowspan
+- 跨列合并，保留最左的单元格，添加colspan
+3.删除其他单元格-->
+<!--注意：不可跨结构标签合并-->
+
+<table border="1">
+    <tr>
+        <th>姓名</th>
+        <th>语文</th>
+        <th>数学</th>
+        <th>总分</th>
+    </tr>
+    <tr>
+        <td>张三</td>
+        <td>80</td>
+        <td rowspan="2">90</td>
+        <td>170</td>
+    </tr>
+    <tr>
+        <td>李四</td>
+        <td>85</td>
+        <!--删除这一行  <td>90</td>-->
+        <td>175</td>
+    </tr>
+    <tr>
+        <td>总结</td>
+        <td colspan="3">全市第一</td>
+<!--        <td>全市第一</td>-->
+<!--        <td>全市第一</td>-->
+    </tr>
+</table>
+
+</body>
+</html>
